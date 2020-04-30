@@ -15,3 +15,4 @@ Now you can turn off your Display's powersupply without risking a corrupt filesy
 2. Save it to the designated destination
 3. Open Terminal and type: *chown 700 \<drag and drop the downloaded file here\>*
 4. The Script is ready to use
+> Those steps are crucial for the script to work. They are granting the script excecution rights.
