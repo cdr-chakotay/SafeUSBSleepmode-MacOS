@@ -1,5 +1,5 @@
 #!/bin/bash
-read -p "Do you want to unmount external drives and hibbernate? (y/n)" var1
+read -p "Do you want to unmount and eject external drives and hibbernate? (y/n)" var1
 
 var1=`echo $var1 | tr '[:upper:]' '[:lower:]'`
 
@@ -43,7 +43,25 @@ then
   done
 fi
 
-echo "Unmounting drives complete"
+#eject Drives -> Pretty much same procedure as above
+
+edrives=`diskutil list | grep -c "/disk"`
+
+if [ $edrives -gt 3 ]
+then
+  #realistic numbers
+  let edrives=edrives-1
+  let toeject=edrives-1
+  echo "$toeject Volumes to eject ..."
+
+  while [ $edrives -gt 1 ]
+  do
+  diskutil eject /dev/disk$edrives
+  let edrives=edrives-1
+  done
+fi
+
+echo "Unmounting and ejecting of drives complete"
 sleep 1
 
 echo "Entering sleepmode.... "
