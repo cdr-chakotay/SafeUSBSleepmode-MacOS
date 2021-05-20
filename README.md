@@ -1,5 +1,5 @@
-# SafeExternalUSBHubHibernation
-USB Sleepmode Helper for MacUsers with external, powered USB Hubs
+# SafeUSBSleepmode-MacOS
+SafeUSBSleepmode-MacOS is an USB Sleepmode Helper for MacUsers with external, powered USB Hubs
 
 ## Intension
 Dedicated to all MacOS users working on external Displays with built in USB Hubs or users with external USB Hubs.
